@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/fav.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>BG Color</title>
+</head>
+<body>
+    <div>
+        <div class="container" id="container"></div>
+        <div class="hello">
+            <h1>Hello World!</h1>
+            <button id="btn" onclick="change_it(event)">Set background color</button>
+        </div>
+    </div>
+    
+    <script>
+        // event.preventDefault()
+        function change_it(event) {
+            var a = Math.floor(Math.random() * 9)
+            var b = Math.floor(Math.random() * 9)
+            var c = Math.floor(Math.random() * 9)
+    
+            var bgcolor = '#'+a+''+b+''+c
+            console.log(bgcolor)
+            document.body.style.backgroundColor = bgcolor
+            document.getElementById('container').innerHTML = ''
+            document.getElementById('container').append(bgcolor)
+            
+        }
+    </script>
+</body>
+
+</html>
